@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String name = editTextName.getText().toString().trim();
-                int price = Integer.parseInteger(String.valueOf(editTextPrice.getText().toString()));
+                int price = Integer.parseInt(String.valueOf(editTextPrice.getText().toString()));
                 if (!TextUtils.isEmpty(name)) {
                     updateProduct(productId, name, price);
                     b.dismiss();
@@ -160,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
     private void addProduct() {
         //getting the values to save
         String name = editTextName.getText().toString().trim();
-        int price = Integer.parseInteger(String.valueOf(editTextPrice.getText().toString()));
+        int price = Integer.parseInt(String.valueOf(editTextPrice.getText().toString()));
 
         //checking if the value is provided
         if (!TextUtils.isEmpty(name)) {
